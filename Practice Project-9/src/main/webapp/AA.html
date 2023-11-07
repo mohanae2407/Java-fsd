@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Tracking with HTTP Session</title>
+</head>
+<body>
+    <h1>Session Tracking with HTTP Session</h1>
+    <form action="SessionServlet" method="post">
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Submit">
+    </form>
+    <p>Your name: <span id="userName"></span></p>
+    <script>
+        // JavaScript to display the user's name retrieved from the session
+      //  var userName = "<%= session.getAttribute("name") %>";
+        if (userName) {
+            document.getElementById("userName").textContent = userName;
+        }
+    </script>
+</body>
+</html>

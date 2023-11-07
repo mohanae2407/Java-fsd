@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Tracking with Hidden Form Fields</title>
+</head>
+<body>
+    <h1>Session Tracking with Hidden Form Fields</h1>
+    <form action="HiddenFormFieldServlet" method="post">
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name">
+        <input type="hidden" name="storedName" id="storedName">
+        <input type="submit" value="Submit">
+    </form>
+    <p>Your name: <span id="userName"></span></p>
+    <script>
+        // JavaScript to copy the "storedName" value to "name" and display it
+        var storedName = document.getElementById("storedName");
+        var name = document.getElementById("name");
+        name.value = storedName.value;
+        document.getElementById("userName").textContent = storedName.value;
+    </script>
+</body>
+</html>

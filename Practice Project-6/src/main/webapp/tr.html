@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Tracking with Cookies</title>
+</head>
+<body>
+    <h1>Session Tracking with Cookies</h1>
+    <form action="SetCookieServlet" method="post">
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Submit">
+    </form>
+    <p>Your name: <span id="userName"></span></p>
+    <script>
+        // JavaScript to read the "name" cookie and display it
+        var name = document.cookie.replace();
+        if (name) {
+            document.getElementById("userName").textContent = name;
+        }
+    </script>
+</body>
+</html>

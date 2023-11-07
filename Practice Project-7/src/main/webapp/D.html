@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Tracking with URL Rewrite</title>
+</head>
+<body>
+    <h1>Session Tracking with URL Rewrite</h1>
+    <form action="SetURLRewriteServlet" method="post">
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name">
+        <input type="submit" value="Submit">
+    </form>
+    <p>Your name: <span id="userName"></span></p>
+    <script>
+        // JavaScript to read the "name" parameter from the URL and display it
+        var urlParams = new URLSearchParams(window.location.search);
+        var name = urlParams.get("name");
+        if (name) {
+            document.getElementById("userName").textContent = name;
+        }
+    </script>
+</body>
+</html>
